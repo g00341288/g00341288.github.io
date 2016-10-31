@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://g00341288.github.io
