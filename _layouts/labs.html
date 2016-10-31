@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+{% include heading.html %}
+
+<div class="container">
+			
+{{ content }}
+
+</div>
+<div class="container">
+	<div class="row">
+
+		<div class="col-md-3">
+			<div class="bs-docs-sidebar">
+				<ul class="nav bs-docs-sidenav">
+				<li>
+					<h3>Source</h3>
+				</li>
+
+				{% for item in site.c50141 %}
+
+					<li>
+						<a href="#{{ item.resource-hash }}">{{ item.name }}</a>
+					</li>
+
+				{% endfor %}
+
+				</ul>
+				
+				<a class="back-to-top" href="#top">Back to top</a>
+			</div>
+		</div>
+
+		<div class="col-md-9 resources">
+
+			<!-- Labs -->
+			<h3>Lab Demos</h3>
+			<div class="table-responsive">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th class="resource-name">Name</th>
+							<th>Description</th>
+							<th class="resource-link">Link</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						{% for item in site.c50141 %}
+						<tr id="{{ item.resource-hash }}">
+							<td>{{ item.name }}</td>
+							<td>{{ item.short-description }}</td>
+							<td><a href="{{ item.resource-link }}" class="btn btn-primary btn-sm">View Demo</a></td>
+						</tr>
+						{% endfor %}
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

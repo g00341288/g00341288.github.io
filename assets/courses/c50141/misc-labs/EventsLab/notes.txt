@@ -1,0 +1,21 @@
+Events
+
+What is an event?
+Events, in the context of the browser, relate to the web API which represents events in the familiar sense of the browser and DOM. They include mousedown, mouseup, page load, and so on. 
+
+Event Handlers: How JS code is triggered by events
+
+Binding an event to an element: 
+HTML event handler attributes / example: <input type="text" id="username" onblure="checkUserName()"> [don't use, not popular]
+Traditional DOM event handlers / example: el.onblur = checkUsername(); [disadvantage - one function per event]
+DOM level 2 event listeners / el.addEventListener('blur', checkUsername, false); [best practice]
+                                                                |           |
+                                                         no parentheses   determines event flow
+
+Event Flow
+Nested elements nested event flow
+Event bubbling events flow up
+Event capturing events flow down
+This matters when an element and its descendents/ancestors also have handlers
+
+Event Delegation next week

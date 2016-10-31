@@ -59,6 +59,15 @@ host:             0.0.0.0
 port:             4050
 
 # Collections
+collections:
+  c50135:
+    output: false
+  c50138:
+    output: false
+  c50141: 
+    output: false
+  c50144:
+    output: false
 
 # Pagination
 paginate: 5
