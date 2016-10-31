@@ -16,11 +16,11 @@
 title: G00341288
 email: g00341288@gmit.ie
 description: > # this means to ignore newlines until "baseurl:"
-  Website to support Leonard M Reidy's BSc in Web Technologies and Programming course.
+  Website to support Leonard M Reidys BSc in Web Technologies and Programming course.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "/blog" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
-github_username:  g00341288
+github_username:  
 
 # Build settings
 markdown: kramdown
@@ -38,7 +38,7 @@ exclude:          [node_modules]
 
 # Site Information
 license:          "MIT"
-license-url:      "<license url>"
+license-url:      "license url"
 author:           "Leonard M Reidy"
 
 # Site Settings
