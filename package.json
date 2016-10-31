@@ -1,0 +1,18 @@
+{
+  "name": "g00341288.github.io",
+  "title": "G00341288",
+  "description": "",
+  "version": "0.0.1",
+  "homepage": "https://g00341288.github.io",
+  "author": "Leonard M Reidy",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.6",
+    "gulp": "^3.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g00341288/g00341288.github.io"
+  }
+}
