@@ -52,7 +52,7 @@ layout: default
 						<tr id="{{ item.resource-hash }}">
 							<td>{{ item.name }}</td>
 							<td>{{ item.short-description }}</td>
-							<td><a href="{{ item.resource-link }}" class="btn btn-primary btn-sm">View Demo</a></td>
+							<td><a href="{{ site.url }}{{ item.resource-link }}" class="btn btn-primary btn-sm">View Demo</a></td>
 						</tr>
 						{% endfor %}
 

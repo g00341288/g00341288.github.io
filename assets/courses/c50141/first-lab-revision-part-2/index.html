@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>First Lab Revision Part 2</title>
+  <link rel="stylesheet" href="css/first-lab-revision-part-2.css" />
+</head>
+<body>
+
+  <h1>Elderflower</h1>
+
+  <div id="content">
+    <div id="greeting" class="message">Colour: <span>white</span></div>
+    <div id="colour" class="inner"></div>
+    <a id="back" href="#" class="action">Back</a>
+    <a href="#" id="changeColour" class="action">Change</a>
+  </div>
+
+  <script src="js/first-lab-revision-part-2.js"></script>
+
+    <!-- This script ensures that no matter where I host the site it 
+    will return to the previous page when the user clicks the back button! -->
+    <script type="text/javascript">
+    var previousPage = document.referrer;
+    var backButton = document.getElementById('back');
+    backButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = previousPage;
+    });
+  </script>
+</body>
+</html>
