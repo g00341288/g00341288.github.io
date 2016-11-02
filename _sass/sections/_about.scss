@@ -1,0 +1,17 @@
+.about-img {
+	border: 10px solid $gray-lighter;
+}
+
+.about-title, .about-subtitle {
+	color: $brand-primary;
+}	
+
+p {
+	font-size: 1.75rem;
+	line-height: 2.75rem;
+	margin-bottom: 20px
+}
+
+.darker {
+	border: 10px solid $gray;
+}
