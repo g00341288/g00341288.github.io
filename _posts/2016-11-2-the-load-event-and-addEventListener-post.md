@@ -18,7 +18,7 @@ projects-ngbootui: "https://github.com/leonardreidy/ngbootui"
 permalink: 		blog/the-load-event-and-addEventListener
 ---
 
-In two recent classes, Kevin presented lab exercises that required the student to add an event listener to the body element to handle the `load` event and several students, myself included, observed some unexplained behaviour with the second parameter to the `addEventListener` function. I have done some research and experimentation and I believe that I have a partial answer to the question concerning this unexplained behaviour and this post will present my findings. 
+In two recent classes, we were presented with lab exercises that required the student to add an event listener to the body element to handle the `load` event and several students, myself included, observed some unexplained behaviour with the second parameter to the `addEventListener` function. I have done some research and experimentation and I believe that I have a partial answer to the question concerning this unexplained behaviour and this post will present my findings. 
 
 ### The Problem
 To refresh your memory, I will present the code from the simpler problem, presented in class today: 
