@@ -9,11 +9,12 @@ meta-title:		"Thoughts on JavaScript"
 
 author:			"Leonard M Reidy"
 author-slug:	leonard-m-reidy
-author-desc:	"Leonard M Reidy is the creator of Jekyll Generic. He is a front end web designer and developer working out of rainy Galway."
+author-desc:	"Leonard M Reidy is the creator of ngBootUI and Jekyll Generic. He is a front end web designer and developer working out of rainy Galway."
 author-url:		https://leonardreidy.github.io/
 author-twitter:	leonardreidy
 author-github:	leonardreidy
 projects-jekyll-generic: "https://github.com/leonardreidy/jekyllgeneric"
+projects-ngbootui: "https://github.com/leonardreidy/ngbootui"
 permalink: 		blog/the-load-event-and-addEventListener
 ---
 
