@@ -13,6 +13,7 @@ author-desc:	"Leonard M Reidy is the creator of Jekyll Generic. He is a front en
 author-url:		https://leonardreidy.github.io/
 author-twitter:	leonardreidy
 author-github:	leonardreidy
+projects-jekyll-generic: "https://github.com/leonardreidy/jekyllgeneric"
 permalink: 		blog/the-load-event-and-addEventListener
 ---
 

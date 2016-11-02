@@ -58,25 +58,29 @@ layout: default
 			</article>
 
 			<div class="well author-info">
-				<img class="pull-left img-responsive img-circle" src="assets/img/authors/{{ page.author-slug }}.png" alt="">
+				<img class="pull-left img-responsive img-circle" src="{{ site.url }}/assets/img/leonardmreidy.png" alt="">
 				<div class="author-content">
 					<h3>{{ page.author }}</h3>
 					<p>{{ page.author-desc }}</p>
 					<ul class="list-inline">
 						{% if page.author-url %}
 						<li>
-							<i class="icon-globe"></i> <a href="{{ page.author-url }}">{{ page.author-url }}</a>
+							<i class="fa fa-globe"></i> <a href="{{ page.author-url }}">{{ page.author-url }}</a>
 						</li>
 						{% endif %}
 						{% if page.author-github %}
 						<li>
-							<i class="icon-social-github"></i> <a href="https://github.com/{{ page.author-github }}">{{ page.author-github }}</a>
+							<i class="fa fa-github"></i> <a href="https://github.com/{{ page.author-github }}">{{ page.author-github }}</a>
 						</li>
 						{% endif %}
 						{% if page.author-twitter %}
 						<li>
-							<i class="icon-social-twitter"></i> <a href="https://twitter.com/{{ page.author-twitter }}">@{{ page.author-twitter }}</a>
+							<i class="fa fa-twitter"></i> <a href="https://twitter.com/{{ page.author-twitter }}">@{{ page.author-twitter }}</a>
 						</li>
+						{% endif %}
+						{% if page.projects-jekyll-generic %}
+						<li>
+							<i class="fa fa-link"></i><a href="{{ page.projects-jekyll-generic }}"> Jekyll Generic</a>
 						{% endif %}
 					</ul>
 				</div>
