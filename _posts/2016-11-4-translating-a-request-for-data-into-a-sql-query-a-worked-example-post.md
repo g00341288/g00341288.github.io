@@ -170,7 +170,7 @@ If we run this query, and check the question, clause/phrase by clause/phrase, ag
 ### Summary
 
 I have outlined a rough-and-ready method for breaking down a data request or exam question and translating it into a SQL query. The method departs from the idea that instead of using the language of the problem to understand the SQL query, it is easier and more intuitive to use our basic knowledge of SQL queries to understand the language of the problem. The essence of the strategy is: <br><br>
-(i) analyse the sentences that comprise the question/request into clauses and/or phrases, and identify the language that nominates attributes, relationships (grouping), and aggregate attributes; <br>
+(i) analyse the sentences that comprise the question/request into clauses and/or phrases, and identify the language that nominates attributes, groupings, and aggregate attributes; <br>
 (ii) write simple SQL queries to match the natural language clauses/phrases; and <br>
 (iii) combine the resulting queries into a single query by combining unique SQL attribute identifiers and unique SQL clauses.<br><br>
 I hope this helps!
