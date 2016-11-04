@@ -75,7 +75,7 @@ Now, let's start laying out some simple queries to match those clauses/phrases. 
 /* the number of employees in each job in each department */
 SELECT E.DEPTNO, E.JOB, COUNT(E.JOB)
 FROM EMP E
-GROUP BY JOB;
+GROUP BY E.JOB;
 
 {% endhighlight %}
 
@@ -86,10 +86,10 @@ Next, we need to get the department they are in. Note that the pronoun phrase ('
 /* the number of employees in each job in each department,
 the department they are in 
 */
-SELECT E.DEPTNO, D.DEPTNAME, E.JOB, COUNT(E.JOB)
+SELECT E.DEPTNO, D.DNAME, E.JOB, COUNT(E.JOB)
 FROM EMP E, DEPT D
 WHERE E.DEPTNO = D.DEPTNO
-GROUP BY JOB;
+GROUP BY E.JOB;
 
 {% endhighlight %}
 
@@ -103,10 +103,10 @@ If we look at the next clause/phrase of the question, we realise that it doesn't
 the department they are in,
 their job title 
 */
-SELECT E.DEPTNO, D.DEPTNAME, E.JOB, COUNT(E.JOB)
+SELECT E.DEPTNO, D.DNAME, E.JOB, COUNT(E.JOB)
 FROM EMP E
 WHERE E.DEPTNO = D.DEPTNO
-GROUP BY JOB;
+GROUP BY E.JOB;
 
 {% endhighlight %}
 
@@ -115,14 +115,14 @@ Next, we'll look at the aggregations in the following two clauses of the questio
 {% highlight sql %}
 
 /* the sum of the salaries of each employee type in each department */
-SELECT DEPTNO, SUM(SAL), JOB
-FROM EMP 
-GROUP BY DEPTNO, JOB;
+SELECT E.DEPTNO, SUM(E.SAL), E.JOB
+FROM EMP E
+GROUP BY E.DEPTNO, E.JOB;
 
 /* the average salary of each employee type in each department */
-SELECT DEPTNO, AVG(SAL), JOB
-FROM EMP 
-GROUP BY DEPTNO, JOB;
+SELECT E.DEPTNO, AVG(E.SAL), E.JOB
+FROM EMP E
+GROUP BY E.DEPTNO, E.JOB;
 
 {% endhighlight %}
 
@@ -192,7 +192,7 @@ WHERE E.DEPTNO = D.DEPTNO;
 
 #### Table Aliases 
 
-The code above uses __table aliases__ to make the syntax for table joins less ambiguous. It is analogous to using dot notation in JavaScript to refer to properties that belong to an object. ENAME is an attribute that __belongs__ to the table ENAME, whose alias is E (E.ENAME), and the attribute DEPTNO belongs to table DEPT, whose alias is D (D.DEPTNO). To tell SQL that you want to use an alias, you do so in your `FROM` clause like this:  
+The code above uses __table aliases__ all the way through. I do this as a rule because I think it is a good habit to get used to using them. They are typically used to make the syntax for table joins less ambiguous. But they can be used even when there is no table join. Using table aliases is SQL is analogous to using dot notation in JavaScript to refer to properties that belong to an object. ENAME is an attribute that __belongs__ to the table ENAME, whose alias is E (E.ENAME), and the attribute DEPTNO belongs to table DEPT, whose alias is D (D.DEPTNO). To tell SQL that you want to use an alias, you do so in your `FROM` clause like this:  
 
 {% highlight sql %}
 FROM EMP E
