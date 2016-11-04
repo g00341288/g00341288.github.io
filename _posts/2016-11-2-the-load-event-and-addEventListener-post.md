@@ -9,7 +9,7 @@ meta-title:		"Thoughts on JavaScript"
 
 author:			"Leonard M Reidy"
 author-slug:	leonard-m-reidy
-author-desc:	"Leonard M Reidy is the creator of ngBootUI and Jekyll Generic. He is a front end web designer and developer working out of rainy Galway."
+author-desc:	"Leonard M Reidy is the creator of ngBootUI and Jekyll Generic. He is a front end web designer and developer working out of rainy Galway. He is actively seeking employment as a front-end web developer with a view to full-stack development. Give him a job. You won't regret it!""
 author-url:		https://leonardreidy.github.io/
 author-twitter:	leonardreidy
 author-github:	leonardreidy
