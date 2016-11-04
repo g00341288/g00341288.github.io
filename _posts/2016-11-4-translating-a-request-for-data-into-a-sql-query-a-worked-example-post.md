@@ -48,8 +48,7 @@ Now, let's work through the problem step by step.
 
 Using the Oracle sample database, an analysis of the question above might look something like this, where we are asked to get: 
 
->
-- the number of employees in each job in each department,
+> - the number of employees in each job in each department,
 - the department they are in,
 - their job title, 
 - the sum of the salaries of each employee type in each department, 
