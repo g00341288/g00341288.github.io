@@ -2,9 +2,9 @@
 layout:			post
 title:			"Translating a Request for Data into a SQL Query - a Worked Example"
 date:			2016-11-4
-category:		News
+category:		SQL, NATURAL LANGUAGE, DATA REQUEST
 description:	"This post introduces a rough-and-ready strategy for translating a request for data expressed in natural language into a SQL query."
-tags:			update
+tags:			SQL, NATURAL LANGUAGE, DATA REQUEST
 meta-title:		"Translating requests for data into SQL queries"
 
 author:			"Leonard M Reidy"
