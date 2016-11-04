@@ -190,7 +190,7 @@ WHERE E.DEPTNO = D.DEPTNO;
 
 #### Table Aliases 
 
-The code above uses __table aliases__ all the way through. I do this as a rule because I think it is a good habit to get used to using them. They are typically used to make the syntax for table joins less ambiguous. But they can be used even when there is no table join. Using table aliases in SQL is analogous to using dot notation in JavaScript to refer to properties that belong to an object. `ENAME` is an attribute that __belongs__ to the table `EMP`, whose alias is `E` (`E.ENAME`), and the attribute `DEPTNO` belongs to the table `DEPT`, whose alias is `D` (`D.DEPTNO`). To tell SQL that you want to use an alias, you do so in your `FROM` clause like this:  
+The code above uses __table aliases__ all the way through. I do this as a rule because I think it is a good habit to get used to using them. They are typically used to make the syntax for table joins less ambiguous. But they can be used even when there is no table join. Using table aliases in SQL is analogous to using dot notation in JavaScript to refer to properties that belong to an object. `ENAME` is an attribute that __belongs__ to the relation (table) `EMP`, whose alias is `E` (`E.ENAME`), and the attribute `DEPTNO` belongs to the relation (table) `DEPT`, whose alias is `D` (`D.DEPTNO`). To tell SQL that you want to use an alias, you do so in your `FROM` clause like this:  
 
 {% highlight sql %}
 FROM EMP E
