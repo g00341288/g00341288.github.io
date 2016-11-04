@@ -165,9 +165,7 @@ GROUP BY E.DEPTNO, E.JOB;
 
 {% endhighlight %}
 
-If we run this query, and check the question, clause/phrase by clause/phrase, against the resulting relation (table), we should be satisfied that we have answered the original question. This is because it is possible to answer this question in a few different ways. 
-
-Now, we can visualise the table! Better still, we have a table to show the person that requested the result, and if it doesn't match their expectations, we have something to use to visualise the new problem and remove ambiguity from the conversation with that person.
+If we run this query, and check the question, clause/phrase by clause/phrase, against the resulting relation (table), we should be satisfied that we have answered the original question.  Now, we can visualise the table! Better still, we have a table to show the person that requested the result, and if it doesn't match their expectations, we have something to use to visualise the new problem and remove ambiguity from the conversation with that person.
 
 ### Summary
 
