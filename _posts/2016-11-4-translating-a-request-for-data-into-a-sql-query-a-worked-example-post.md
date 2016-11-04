@@ -24,6 +24,8 @@ There are a number of effective approaches to analysing problems expressed in na
 
 In what follows, I will present a rough-and-ready strategy for translating a request for data expressed in natural language into a SQL query. The strategy presented here is an outline only. But it can be generalised fairly easily. I will leave that exercise to the reader.
 
+#### The Question/Data Request
+
 Assuming we are using the classic Oracle [sample database](http://www.uvm.edu/~kdk/demobld.sql), take the following question as an example: 
 
 > Get the number of employees in each job in each department in the company. Also list the department they are in, the job title, the sum of the salaries of each employee type in each department, the average salary of each employee type in each department, and show the information grouped by department name and job.<br><br>
