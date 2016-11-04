@@ -42,7 +42,7 @@ Now, let's work through the problem step by step.
 
 ---
 
-#### Step 1 - Analyse the Question/Data Request into Clauses/Phrases
+### Step 1 - Analyse the Question/Data Request into Clauses/Phrases
 
 Using the Oracle sample database, an analysis of the question above might look something like this: 
 
@@ -65,7 +65,7 @@ Keeping these ideas in mind, we can move on to step 2, where we will write and t
 
 ---
 
-#### Step 2 - Write and Test a Simple Query for each Clause/Phrase: 
+### Step 2 - Write and Test a Simple Query for each Clause/Phrase: 
 
 Now, let's start laying out some simple queries to match those clauses/phrases. To get the number of employees in each job in each department, remember the aggregation phrases and grouping phrases. The number of employees is a __count__, and this can be expressed with the SQL `COUNT()` function, and the relationship preposition 'in', indicates a grouping because employees belong to a department, which is essentially a __group__ of employees. Note that since we are using an aggregate function in our first query, we should try using the `GROUP BY` SQL clause too as they are typically used together. So our first query will look a little like this: 
 
@@ -127,7 +127,7 @@ GROUP BY DEPTNO, JOB;
 
 --- 
 
-#### Step 3 - Combine Unique SQL Attribute Identifiers and Unique SQL Clauses
+### Step 3 - Combine Unique SQL Attribute Identifiers and Unique SQL Clauses
 
 If you have followed me this far, what should be immediately apparent now is that each of these separate simple queries, has something in common with the others, specifically attributes and SQL clauses. So we start with the `SELECT`s, and bring together the __unique__ attributes and aggregate attributes:
 
@@ -164,7 +164,7 @@ GROUP BY E.DEPTNO, E.JOB;
 
 {% endhighlight %}
 
-If we run this query, and check the question, clause/phrase by clause/phrase, against the resulting relation (table), we should be satisfied that we have answered the original question. 
+If we run this query, and check the question, clause/phrase by clause/phrase, against the resulting relation (table), we should be satisfied that we have answered the original question. This is because it is possible to answer this question in a few different ways. 
 
 Now, we can visualise the table! Better still, we have a table to show the person that requested the result, and if it doesn't match their expectations, we have something to use to visualise the new problem and remove ambiguity from the conversation with that person.
 
@@ -175,3 +175,38 @@ I have outlined a rough-and-ready method for breaking down a data request or exa
 (ii) write simple SQL queries to match the natural language clauses/phrases; and <br>
 (iii) combine the resulting queries into a single query by combining unique SQL attribute identifiers and unique SQL clauses.<br><br>
 I hope this helps!
+
+### PostScript
+If you are taking a class and you notice a difference here and there between my solution and that of your lecturer, it is because you can get the same result by constructing a query using the department number instead of the department name in the `GROUP BY` clause, and you may choose to omit the department number from your final `SELECT` statement also. In fact, there are dozens of minor variations that should result in the same table. The essence of the solution should still be the same and the resulting table should be the same!
+
+Finally, if you find this syntax confusing, see below for a brief explanation: 
+
+{% highlight sql %}
+SELECT E.ENAME, D.DEPTNO
+FROM EMP E, DEPT D
+WHERE E.DEPTNO = D.DEPTNO;
+{% endhighlight %}
+
+---
+
+#### Table Aliases 
+
+The code above uses __table aliases__ to make the syntax for table joins less ambiguous. It is analogous to using dot notation in JavaScript to refer to properties that belong to an object. ENAME is an attribute that __belongs__ to the table ENAME, whose alias is E (E.ENAME), and the attribute DEPTNO belongs to table DEPT, whose alias is D (D.DEPTNO). To tell SQL that you want to use an alias, you do so in your `FROM` clause like this:  
+
+{% highlight sql %}
+FROM EMP E
+{% endhighlight %} 
+
+or 
+
+{% highlight sql %}
+FROM EMP AS E
+{% endhighlight %}
+
+Naturally, you can specify multiple table aliases in a single `FROM` clause like so: 
+
+{% highlight sql %}
+FROM EMP E, DEPT D, CUSTOMER C
+{% endhighlight %}
+
+---
