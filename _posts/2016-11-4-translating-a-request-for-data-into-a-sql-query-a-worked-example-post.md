@@ -46,9 +46,9 @@ Now, let's work through the problem step by step.
 
 ### Step 1 - Analyse the Question/Data Request into Clauses/Phrases
 
-Using the Oracle sample database, an analysis of the question above might look something like this: 
+Using the Oracle sample database, an analysis of the question above might look something like this, where we are asked to get: 
 
-> Get
+>
 - the number of employees in each job in each department,
 - the department they are in,
 - their job title, 
