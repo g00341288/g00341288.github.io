@@ -121,6 +121,7 @@ GROUP BY D.DNAME, E.JOB;
 /* the average salary of each employee type in each department */
 SELECT D.DNAME, AVG(E.SAL), E.JOB
 FROM EMP E, DEPT D
+WHERE E.DEPTNO = D.DEPTNO
 GROUP BY D.DNAME, E.JOB;
 
 {% endhighlight %}
