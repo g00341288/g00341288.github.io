@@ -72,8 +72,8 @@ Now, let's start laying out some simple queries to match those clauses/phrases. 
 
 {% highlight sql %}
 
-/* the number of employees in each job in each department */
-SELECT E.DEPTNO, E.JOB, COUNT(E.JOB)
+/* the number of employees in each job*/
+SELECT E.JOB, COUNT(E.JOB)
 FROM EMP E
 GROUP BY E.JOB;
 
@@ -83,13 +83,12 @@ Next, we need to get the department they are in. Note that the pronoun phrase ('
 
 {% highlight sql %}
 
-/* the number of employees in each job in each department,
-the department they are in 
+/* the number of employees in each job in each department 
 */
-SELECT E.DEPTNO, D.DNAME, E.JOB, COUNT(E.JOB)
+SELECT D.DNAME, E.JOB, COUNT(E.JOB)
 FROM EMP E, DEPT D
 WHERE E.DEPTNO = D.DEPTNO
-GROUP BY E.JOB;
+GROUP BY D.DNAME, E.JOB;
 
 {% endhighlight %}
 
@@ -100,13 +99,12 @@ If we look at the next clause/phrase of the question, we realise that it doesn't
 {% highlight sql %}
 
 /* the number of employees in each job in each department,
-the department they are in,
 their job title 
 */
-SELECT E.DEPTNO, D.DNAME, E.JOB, COUNT(E.JOB)
+SELECT D.DNAME, E.JOB, COUNT(E.JOB)
 FROM EMP E
 WHERE E.DEPTNO = D.DEPTNO
-GROUP BY E.JOB;
+GROUP BY D.DNAME, E.JOB;
 
 {% endhighlight %}
 
@@ -115,14 +113,15 @@ Next, we'll look at the aggregations in the following two clauses of the questio
 {% highlight sql %}
 
 /* the sum of the salaries of each employee type in each department */
-SELECT E.DEPTNO, SUM(E.SAL), E.JOB
-FROM EMP E
-GROUP BY E.DEPTNO, E.JOB;
+SELECT D.DNAME, E.JOB, COUNT(E.JOB), SUM(E.SAL)
+FROM EMP E, DEPT D 
+WHERE E.DEPTNO = D.DEPTNO 
+GROUP BY D.DNAME, E.JOB;
 
 /* the average salary of each employee type in each department */
-SELECT E.DEPTNO, AVG(E.SAL), E.JOB
-FROM EMP E
-GROUP BY E.DEPTNO, E.JOB;
+SELECT D.DNAME, AVG(E.SAL), E.JOB
+FROM EMP E, DEPT D
+GROUP BY D.DNAME, E.JOB;
 
 {% endhighlight %}
 
@@ -134,15 +133,16 @@ If you have followed me this far, what should be immediately apparent now is tha
 
 {% highlight sql %}
 
-SELECT E.DEPTNO, D.DNAME, E.JOB, COUNT(E.JOB), SUM(E.SAL), AVG(E.SAL) 
+SELECT D.DNAME, E.JOB, COUNT(E.JOB), SUM(E.SAL), AVG(E.SAL)
 
 {% endhighlight %}
 
-Then, we bring together the `FROM` clauses: 
+Then, we bring together the `FROM` and `WHERE` clauses: 
 
 {% highlight sql %}
 
 FROM EMP E, DEPT D
+WHERE E.DEPTNO = D.DEPTNO
 
 {% endhighlight %}
 
@@ -150,7 +150,7 @@ Finally, we return to the last clause/phrase of the original problem. Note that 
 
 {% highlight sql %}
 
-GROUP BY E.DEPTNO, E.JOB;
+GROUP BY D.DNAME, E.JOB;
 
 {% endhighlight %}
 
@@ -158,10 +158,10 @@ The final draft of our query looks like this:
 
 {% highlight sql %}
 
-SELECT E.DEPTNO, D.DNAME, E.JOB, COUNT(E.JOB), SUM(E.SAL), AVG(E.SAL)
-FROM EMP E, DEPT D,
+SELECT D.DNAME, E.JOB, COUNT(E.JOB), SUM(E.SAL), AVG(E.SAL)
+FROM EMP E, DEPT D
 WHERE E.DEPTNO = D.DEPTNO
-GROUP BY E.DEPTNO, E.JOB;
+GROUP BY D.DNAME, E.JOB;
 
 {% endhighlight %}
 
