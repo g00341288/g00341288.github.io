@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JavaScript Events - Event Attributes</title>
-    <link rel="stylesheet" href="css/stylesheet.css" />
-    <script src="js/event-attributes.js"></script>
+    <title>JavaScript Events Lab 3 - Event Listener and Event Object</title>
   </head>
   <body>
     <div id="page">
@@ -14,21 +12,21 @@
         GitHub pages does not support form POST method - using GET instead
         for demos. The source code for the example uses the correct POST method:
 
-          <form method="post" action="registered.html"> 
+          <form method="post"> 
 
       -->
-      <form method="GET" action="registered.html">
+      <form method="GET">
 
         <label for="username">Create a username: </label>
-        <input type="text" id="username" onblur="checkUsername()" />
-        <div id="feedback"></div>
+        <input type="text" id="username" /><div id="feedback"></div>
 
         <label for="password">Create a password: </label>
-        <input type="password" id="password" />
+        <input type="password" id="password" /><div id="feedback"></div>
 
-        <input type="submit" value="sign up!" />
+        <input type="submit" value="sign up" />
 
       </form>
     </div>
+    <script src="event-listener-with-event-object.js"></script>
   </body>
 </html>
