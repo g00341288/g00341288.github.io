@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Events - Event Listener</title>
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <script src="js/event-listener.js"></script>
+  </head>
+  <body>
+    <div id="page">
+      <h1>List King</h1>
+      <h2>New Account</h2>
+      <!-- 
+      
+        GitHub pages does not support form POST method - using GET instead
+        for demos. The source code for the example uses the correct POST method:
+
+          <form method="post" action="registered.html"> 
+
+      -->
+      <form method="GET" action="registered.html">
+
+        <label for="username">Create a username: </label>
+        <input type="text" id="username" />
+        <div id="feedback"></div>
+
+        <label for="password">Create a password: </label>
+        <input type="password" id="password" />
+
+        <input type="submit" value="sign up" />
+
+      </form>
+    </div>
+  </body>
+</html>
