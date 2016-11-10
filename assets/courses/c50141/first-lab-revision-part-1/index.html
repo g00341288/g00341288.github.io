@@ -31,19 +31,8 @@
 		  </tr>
 	    </table>
 	   	<a id="button" href="#" class="action">Pay Now</a>
-	   	<a id="back" href="#" class="action">Back</a>
+	   	<a id="back" href="/web-application-development/" class="action">Back</a>
 	  </div>
 	  <script src="js/first-lab-revision-part-1.js"></script>
-
-	  <!-- This script ensures that no matter where I host the site it 
-	  will return to the previous page when the user clicks the back button! -->
-	  <script type="text/javascript">
-		var previousPage = document.referrer;
-		var backButton = document.getElementById('back');
-		backButton.addEventListener('click', function(e) {
-			e.preventDefault();
-			window.location.href = previousPage;
-		});
-	</script>
 </body>
 </html>
