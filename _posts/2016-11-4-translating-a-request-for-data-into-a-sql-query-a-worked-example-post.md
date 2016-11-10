@@ -102,7 +102,7 @@ If we look at the next clause/phrase of the question, we realise that it doesn't
 their job title 
 */
 SELECT D.DNAME, E.JOB, COUNT(E.JOB)
-FROM EMP E
+FROM EMP E, DEPT D
 WHERE E.DEPTNO = D.DEPTNO
 GROUP BY D.DNAME, E.JOB;
 
