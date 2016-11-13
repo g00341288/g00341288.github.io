@@ -3,6 +3,7 @@ function book(name) {
 	this.name = name;
 }
 
+// add new book object to local storage
 function add(){
 
 	var uniqueKey = "obj-key"+localStorage.length;
