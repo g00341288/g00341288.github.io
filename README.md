@@ -11,18 +11,31 @@ The source code for module labs may be found in:
 Jekyll resources used to build the site may be found variously distributed over the following directories: 
 
 `_c50135`
+
 `_c50138`
+
 `_c50141`
+
 `_c50144`
+
 `_includes`
+
 `_layouts`
+
 `_posts`
+
 `_sass`
+
 `_site`
+
 `assets`
+
 `blog`
+
 `css`
+
 `js`
+
 `vendor`
 
 Site source code comprises markdown files, Liquid templates, and html partials chiefly, which the Jekyll 
