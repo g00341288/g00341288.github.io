@@ -54,7 +54,8 @@ to be satisfied first. Jekyll requires:
 Detailed instructions may be found on the installation procedure [here](https://jekyllrb.com/docs/installation/) and 
 [here](https://jekyllrb.com/docs/windows/#installation). 
 
-If you already have a suitable development environment, you can fire up the site with the following command: 
+If you already have a suitable development environment, you can fire up the site with the following command from the
+site root directory: 
 
 `bundle exec jekyll serve`
 
