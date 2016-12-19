@@ -15,18 +15,17 @@ layout: default
 		<div class="col-md-3">
 			<div class="bs-docs-sidebar">
 				<ul class="nav bs-docs-sidenav">
-				<li>
-					<h3>Source</h3>
-				</li>
-
-				{% for item in site.c50141 %}
-
 					<li>
-						<a href="#{{ item.resource-hash }}">{{ item.name }}</a>
+						<h3>Source</h3>
 					</li>
 
-				{% endfor %}
-
+					<li>
+						<div>
+							<p>In the table on the right you will find brief descriptions and links to demos of the associated code. Some of the demos are not, strictly speaking, functional. PHP lab content cannot be served from Github pages, which hosts this site. Any lab that is not currently functioning on Github pages should include a brief README.md file to signal this
+							</p>
+			        <a href="https://github.com/g00341288/g00341288.github.io" class="btn btn-lg btn-primary"><i class="fa fa-github"></i> Github Project Repo</a>
+		        </div>
+					</li>
 				</ul>
 				
 				<a class="back-to-top" href="#top">Back to top</a>
@@ -35,7 +34,7 @@ layout: default
 
 		<div class="col-md-9 resources">
 
-			<!-- Labs -->
+			<!-- Labs - liquid templates are used hear to pull  -->
 			<h3>Lab Demos</h3>
 			<div class="table-responsive">
 				<table class="table table-bordered table-striped">
